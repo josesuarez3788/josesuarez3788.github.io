@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación de aplicaciones con sockets</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">INICIO</a>
+            </div>
+            <ul>
+                <li><a href="tema1.html">Programación de aplicaciones con sockets</a></li>
+                <li><a href="tema2.html">Seguridad en la comunicación de datos de una red</a></li>
+                <li><a href="tema3.html">Seguridad en la Web</a></li>
+                <li><a href="tema4.html">Internet de las cosas</a></li>
+                <li><a href="creditos.html">Créditos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="main-socket--container">
+        <h2>Programación de aplicaciones con sockets</h2>
+        <p>
+            Socket designa un concepto abstracto por el cual dos procesos (posiblemente situados en computadoras
+            distintas) pueden intercambiar cualquier flujo de datos, generalmente de manera fiable y ordenada. Además es
+            una estructura de datos que permite que dos maquinas se comuniquen entre ellas.
+        </p>
+        <img src="img/clienteservidor.jpg" alt="">
+        <p>Los sockets de Internet constituyen el mecanismo para la entrega de paquetes de datos provenientes de la
+            tarjeta de red a los procesos o hilos apropiados. Un socket queda definido por un par de direcciones IP
+            local y remota, un protocolo de transporte y un par de números de puerto local y remoto</p>
+        <p>Para que dos procesos puedan comunicarse entre sí es necesario que se cumplan ciertos requisitos:<br>
+
+            - Que un proceso sea capaz de localizar al otro.<br>
+            - Que ambos procesos sean capaces de intercambiarse cualquier secuencia de octetos, es decir, datos
+            relevantes
+            a su finalidad.<br><br>
+            Para ello son necesarios los dos recursos que originan el concepto de socket:<br><br>
+
+            - Un par de direcciones del protocolo de red (dirección IP, si se utiliza el protocolo TCP/IP), que
+            identifican la computadora de origen y la remota. <br>
+            - Un par de números de puerto, que identifican a un programa dentro de cada computadora.<br><br>
+            Los sockets permiten implementar una arquitectura cliente-servidor. La comunicación debe ser iniciada por
+            uno de los procesos que se denomina programa "cliente". El segundo proceso espera a que otro inicie la
+            comunicación, por este motivo se denomina programa "servidor".<br><br>
+
+            Un socket es un proceso o hilo existente en la máquina cliente y en la máquina servidora, que sirve en
+            última instancia para que el programa servidor y el cliente lean y escriban la información. Esta información
+            será la transmitida por las diferentes capas de red.</p>
+        <p>A la hora de programar con sockets, si nos centramos en la parte de comunicaciones, la forma general de
+            implementar un cliente será:</p>
+        <ul>
+            <li>1- Crear un objeto de la clase Socket, indicando host y puerto donde corre el servicio.</li>
+            <li>2- Obtener las referencias al stream de entrada y al de salida al socket.</li>
+            <li>3- Leer desde y escribir en el stream de acuerdo al protocolo del servicio.</li>
+            <li>4- Cerrar los streams.</li>
+            <li>5- Cerrar sockets</li>
+        </ul><br>
+        <p>A continuación, una primera parte de un video tutorial para programar con sockets en Java</p><br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/tX_RDW5QYMY" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </section>
+</body>
+
+</html>

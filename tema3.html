@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación de aplicaciones con sockets</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">INICIO</a>
+            </div>
+            <ul>
+                <li><a href="tema1.html">Programación de aplicaciones con sockets</a></li>
+                <li><a href="tema2.html">Seguridad en la comunicación de datos de una red</a></li>
+                <li><a href="tema3.html">Seguridad en la Web</a></li>
+                <li><a href="tema4.html">Internet de las cosas</a></li>
+                <li><a href="creditos.html">Créditos</a></li>
+            </ul>
+        </nav>
+
+        <section class="main-segweb--container">
+            <h2>Seguridad en la WEB: HTPPS & SSL</h2>
+            <p>
+                El Protocolo seguro de transferencia de hipertexto (en inglés, Hypertext Transfer Protocol Secure o HTTPS) 
+                es un protocolo de aplicación basado en el protocolo HTTP, destinado a la transferencia segura de 
+                datos de hipertexto, es decir, es la versión segura de HTTP.
+            </p>
+            <img src="https://t-position.com/wp-content/uploads/2018/04/implementar-https.png">
+            <h3> Caracteristicas técnicas </h3>
+            <p>
+                Usa TLS para crear un canal cifrado (cuyo nivel de cifrado depende del servidor remoto y del navegador
+                utilizado por el cliente) más apropiado para el tráfico de información sensible que el protocolo HTTP. 
+                De este modo se consigue que la información sensible (usuario y claves de paso normalmente) 
+                no pueda ser usada por un atacante que haya conseguido interceptar la transferencia de datos de 
+                la conexión, ya que lo único que obtendrá será un flujo de datos cifrados que le resultará imposible 
+                de descifrar. El puerto estándar para este protocolo es el 443. (También comúnmente usado el 4433).
+            </p>
+
+            <h3> Historia </h3>
+            <p> Netscape Communications creó HTTPS en 1992 para su navegador Netscape Navigator.1​ Originalmente, 
+                HTTPS era utilizado solamente con el cifrado SSL, pero este se volvió obsoleto ante TLS.
+            </p>
+
+            <h3> Diferencias con HTTP </h3>
+            <p>
+                En el protocolo HTTP las URLs comienzan con "http://" y utilizan por omisión el puerto 80, 
+                las URLs de HTTPS comienzan con "https://" y utilizan el puerto 443 por omisión.
+                HTTP es inseguro y está sujeto a ataques man-in-the-middle y eavesdropping que pueden permitir
+                al atacante obtener acceso a bancos y a cuentas de un sitio web e información confidencial. 
+                HTTPS está diseñado para resistir esos ataques y ser más seguro.
+            </p>
+
+            <h3> Capas de red </h3>
+            <p> El sistema de HTTPS opera en la capa más alta del modelo OSI, la capa de aplicación; 
+                pero el protocolo sin seguridad opera en una subcapa más baja, cifrando un mensaje HTTP 
+                previo a la transmisión y descifrando un mensaje una vez recibido. Estrictamente hablando, 
+                HTTPS no es un protocolo separado, pero refiere el uso del HTTP ordinario sobre una 
+                Capa de Conexión Segura cifrada Secure Sockets Layer (SSL) o una conexión con Seguridad de la 
+                Capa de Transporte (TLS).
+            </p>
+
+            <h3> Limitaciones </h3>
+            <p> 
+                El nivel de protección depende de la exactitud de la implementación del navegador web, 
+                el software del servidor y los algoritmos de cifrado actualmente soportados.
+                También, HTTPS es vulnerable cuando se aplica a contenido estático de publicación disponible. 
+                El sitio entero puede ser indexado usando una araña web, y la URI del recurso cifrado puede ser 
+                adivinada conociendo solamente el tamaño de la petición/respuesta.16​ Esto permite a un atacante 
+                tener acceso al texto plano (contenido estático de publicación), y al texto cifrado 
+                (La versión cifrada del contenido estático), permitiendo un ataque criptográfico.
+            </p>
+            <br><br>
+
+            <h2> Pero, ¿Qué es SSL? </h2>
+            <p> SSL es el acrónimo de Secure Sockets Layer (capa de sockets seguros), 
+                la tecnología estándar para mantener segura una conexión a Internet, 
+                así como para proteger cualquier información confidencial que se 
+                envía entre dos sistemas e impedir que los delincuentes lean y 
+                modifiquen cualquier dato que se transfiera, incluida información 
+                que pudiera considerarse personal. 
+            </p>
+            <img src="https://agenciaune.com/wp-content/uploads/2020/10/1_xlyuudKfYTxrFXFevxzPgg.jpeg">
+
+            <h3> ¿Cómo funcionan los certificados SSL? </h3>
+            <p> Los certificados SSL funcionan garantizando que los datos transferidos entre usuarios 
+                y sitios web, o entre dos sistemas, sean imposibles de leer.
+                Utiliza algoritmos de cifrado para cifrar los datos en tránsito, lo que evita que los 
+                hackers la información que se envía a través de la conexión.
+            </p>
+            <p> El proceso funciona da la siguiente manera: </p>
+            <ul>
+                <li>1. Un navegador o servidor intenta conectarse a un sitio web (es decir, un servidor web) 
+                        protegido mediante certificados SSL. </li>
+                <li>2. El navegador o servidor solicita que el servidor web se identifique.</li>
+                <li>3. En respuesta el servidor web envía al navegador o servidor una copia de su certificado SSL.</li>
+                <li>4. El navegador o servidor evalúa si el certificado SSL es confiable. En caso afirmativo, 
+                        envía una señal al servidor web.</li>
+                <li>5. A continuación, el servidor web devuelve un reconocimiento firmado digitalmente para 
+                        iniciar una sesión cifrada mediante SSL. </li>
+                <li>6. Los datos cifrados se comparten entre el navegador o servidor y el servidor web.</li>
+            </ul>
+
+            <h3> ¿Por qué se necesita un certificado SSL?</h3>
+            <p> 
+                Los sitios web necesitan certificados SSL para mantener la seguridad de los datos del usuario, 
+                verificar la propiedad del sitio web, evitar que los atacantes creen una versión falsa del sitio 
+                y para transmitir confianza a los usuarios.
+            </p>
+            <p> Un certificado SSL ayuda a proteger información como la siguiente: </p>
+            <ul> 
+                <li>Credenciales de inicio de sesión</li>
+                <li>Transacciones con tarjeta de crédito o información de la cuenta bancaria</li>
+                <li>Información de identificación personal, como nombre completo, dirección, fecha de nacimiento o número de teléfono</li>
+                <li>Documentos y contratos legales</li>
+                <li>Historia clínica</li>
+                <li>Información de propiedad</li>
+            </ul>
+        </section>
+    </header>
+</body>
+
+</html>
